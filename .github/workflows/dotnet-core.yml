@@ -23,8 +23,21 @@ jobs:
       run: dotnet restore claimer
 
     - name: Claim games
+
       run: |
+
         $Env:epicname="${{secrets.USERNAME}}"
+
         $Env:epicpass="${{secrets.PASS}}"
+
         $Env:captcha="${{secrets.CAPTCHA}}"
+
+        dotnet run --project claimer/claimer/claimer.csproj
+
+        $Env:epicname="${{secrets.USERNAME2}}"
+
+        $Env:epicpass="${{secrets.PASS2}}"
+
+        $Env:captcha="${{secrets.CAPTCHA2}}"
+
         dotnet run --project claimer/claimer/claimer.csproj
