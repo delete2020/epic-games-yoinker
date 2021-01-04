@@ -41,3 +41,19 @@ jobs:
         $Env:captcha="${{secrets.CAPTCHA2}}"
 
         dotnet run --project claimer/claimer/claimer.csproj
+        
+        $Env:epicname="${{secrets.USERNAME3}}"
+
+        $Env:epicpass="${{secrets.PASS3}}"
+
+        $Env:captcha="${{secrets.CAPTCHA3}}"
+
+        dotnet run --project claimer/claimer/claimer.csproj
+
+        $Env:epicname="${{secrets.USERNAME4}}"
+
+        $Env:epicpass="${{secrets.PASS4}}"
+
+        $Env:captcha="${{secrets.CAPTCHA4}}"
+
+        dotnet run --project claimer/claimer/claimer.csproj
